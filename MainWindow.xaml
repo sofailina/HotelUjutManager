@@ -1,0 +1,134 @@
+﻿<Window x:Class="HotelUjutManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Гостиница Уют - Управление" 
+        Height="500" Width="700"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Background="#f5f5f5">
+
+        <Border Background="#2c3e50" Height="60" VerticalAlignment="Top">
+            <TextBlock Text="Гостиница Уют - Главное меню" 
+                       Foreground="White" 
+                       FontSize="22" 
+                       FontWeight="Bold"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+        </Border>
+
+        <Grid Margin="20" VerticalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" 
+                    Content="Бронирование"
+                    Margin="10"
+                    Background="#3498db"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Height="70"
+                    Click="BookingButton_Click"/>
+
+            <Button Grid.Row="0" Grid.Column="1"
+                    Content="Гости"
+                    Margin="10"
+                    Background="#2ecc71"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Height="70"
+                    Click="GuestsButton_Click"/>
+
+            <Button Grid.Row="0" Grid.Column="2"
+                    Content="Номера"
+                    Margin="10"
+                    Background="#9b59b6"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Height="70"
+                    Click="RoomsButton_Click"/>
+
+            <Button Grid.Row="1" Grid.Column="0"
+                    Content="Уборка"
+                    Margin="10"
+                    Background="#e67e22"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Height="70"
+                    Click="CleaningButton_Click"/>
+
+            <Button Grid.Row="1" Grid.Column="1"
+                    Content="Оплаты"
+                    Margin="10"
+                    Background="#e74c3c"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Height="70"
+                    Click="PaymentsButton_Click"/>
+
+            <Button Grid.Row="1" Grid.Column="2"
+                    Content="Отчеты"
+                    Margin="10"
+                    Background="#34495e"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Height="70"
+                    Click="ReportsButton_Click"/>
+
+            <Button Grid.Row="2" Grid.Column="0"
+                    Content="Услуги"
+                    Margin="10"
+                    Background="#1abc9c"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Height="70"
+                    Click="ServicesButton_Click"/>
+
+            <Button Grid.Row="2" Grid.Column="1"
+                    Content="Сотрудники"
+                    Margin="10"
+                    Background="#f39c12"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Height="70"
+                    Click="EmployeesButton_Click"/>
+
+            <Button Grid.Row="2" Grid.Column="2"
+                    Content="Выход"
+                    Margin="10"
+                    Background="#7f8c8d"
+                    Foreground="White"
+                    FontSize="16"
+                    FontWeight="Bold"
+                    Height="70"
+                    Click="ExitButton_Click"/>
+        </Grid>
+
+        <Border Background="#ecf0f1" 
+                Height="40" 
+                VerticalAlignment="Bottom"
+                BorderBrush="#bdc3c7"
+                BorderThickness="1,1,0,0">
+            <TextBlock x:Name="StatusText"
+                       Text="Готово к работе"
+                       Margin="10"
+                       VerticalAlignment="Center"/>
+        </Border>
+    </Grid>
+</Window>
